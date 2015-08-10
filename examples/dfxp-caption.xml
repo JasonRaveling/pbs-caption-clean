@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tt xml:lang="en" xmlns="http://www.w3.org/ns/ttml" xmlns:tts="http://www.w3.org/ns/ttml#styling">
+ <head>
+  <styling>
+   <style tts:color="white" tts:fontFamily="monospace" tts:fontSize="1c" xml:id="default"/>
+  </styling>
+  <layout>
+   <region tts:displayAlign="after" tts:textAlign="center" xml:id="bottom"/>
+   <region tts:displayAlign="before" tts:extent="87.5% 13.33%" tts:origin="12.5% 86.67%" tts:textAlign="left" xml:id="r0"/>
+   <region tts:displayAlign="before" tts:extent="100% 13.33%" tts:origin="0% 86.67%" tts:textAlign="left" xml:id="r1"/>
+   <region tts:displayAlign="before" tts:extent="100% 20%" tts:origin="0% 80%" tts:textAlign="left" xml:id="r2"/>
+   <region tts:displayAlign="before" tts:extent="87.5% 6.67%" tts:origin="12.5% 93.33%" tts:textAlign="left" xml:id="r3"/>
+   <region tts:displayAlign="before" tts:extent="62.5% 6.67%" tts:origin="37.5% 93.33%" tts:textAlign="left" xml:id="r4"/>
+   <region tts:displayAlign="before" tts:extent="75% 6.67%" tts:origin="25% 93.33%" tts:textAlign="left" xml:id="r5"/>
+   <region tts:displayAlign="before" tts:extent="87.5% 20%" tts:origin="12.5% 80%" tts:textAlign="left" xml:id="r6"/>
+  </layout>
+ </head>
+ <body>
+  <div region="bottom" xml:lang="en-US">
+   <p begin="00:00:02.102" end="00:00:04.037" region="r0" style="default">
+    This is the beginning of<br/>
+    your broadcast content.
+   </p>
+   <p begin="00:00:04.404" end="00:00:06.072" region="r1" style="default">
+    You would probably have an<br/>
+    introduction right about now,
+   </p>
+   <p begin="00:00:07.807" end="00:00:09.075" region="r2" style="default">
+    followed by your intro music.<br/>
+    Sometimes people will use music<br/>
+    notes to show
+   </p>
+   <p begin="00:00:09.743" end="00:00:11.111" region="r3" style="default">
+    that music is playing.
+   </p>
+   <p begin="00:00:11.411" end="00:00:21.121" region="r4" style="default">
+    ♩
+   </p>
+   <p begin="00:00:21.921" end="00:00:23.156" region="r0" style="default">
+    It looks nice but<br/>
+    "Oh no!"
+   </p>
+   <p begin="00:00:24.791" end="00:00:25.592" region="r2" style="default">
+    When the file is ingested, it<br/>
+    fails because the is not a UTF-8
+   </p>
+   <p begin="00:00:26.192" end="00:00:27.594" region="r3" style="default">
+    character. It is ASCII.
+   </p>
+   <p begin="00:00:29.162" end="00:00:30.630" region="r2" style="default">
+    Sometimes, if you're converting<br/>
+    a caption file from one format<br/>
+    to
+   </p>
+   <p begin="00:00:32.432" end="00:00:33.500" region="r2" style="default">
+    another. You will notice some<br/>
+    lines have the characters " pp"<br/>
+    or " PP" in them.
+   </p>
+   <p begin="00:00:33.967" end="00:00:35.502" region="r5" style="default">
+    That is no good.
+   </p>
+   <p begin="00:00:40.173" end="00:00:42.542" region="r2" style="default">
+    Oh. The show is ending. We<br/>
+    better roll credits and play<br/>
+    some music.
+   </p>
+   <p begin="00:00:42.842" end="00:00:45.145" region="r4" style="default">
+    ♩
+   </p>
+   <p begin="00:00:45.478" end="00:00:47.180" region="r4" style="default">
+    ♩
+   </p>
+   <p begin="00:00:47.514" end="00:00:49.215" region="r4" style="default">
+    ♩
+   </p>
+   <p begin="00:00:50.850" end="00:00:52.786" region="r2" style="default">
+    And here is one other format<br/>
+    I've seen where someone got<br/>
+    creative.
+   </p>
+   <p begin="00:00:53.253" end="00:00:54.821" region="r5" style="default">
+    « music »
+   </p>
+   <p begin="00:00:55.855" end="00:00:56.823" region="r0" style="default">
+    Thank you for watching.<br/>
+    Have a great day.
+   </p>
+   <p begin="00:00:58.091" end="00:01:02.829" region="r0" style="default">
+    Python script/code<br/>
+    by Jason Raveling
+   </p>
+   <p begin="00:01:04.697" end="00:01:18.111" region="r6" style="default">
+    Check out the repo at<br/>
+    github.com/lakelandPBS/pbs-caption-clean
+   </p>
+  </div>
+ </body>
+</tt>

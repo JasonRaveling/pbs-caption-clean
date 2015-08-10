@@ -1,0 +1,10 @@
+Some text that should not be replaced.
+«
+»
+♩
+♪
+♫
+♫
+ pp
+ PP
+More text that shouldn't be replaced except for... PP <--- should be blank
