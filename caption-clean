@@ -12,8 +12,8 @@ import fileinput
 try:
     sys.argv[1]
 except:
-    print("\nUsage: caption-clean input-file [output file] \n")
-    sys.exit(1)
+    print("\nUsage: caption-clean input-file [output file]\n")
+    exit(1)
 else:
     inFile = sys.argv[1]
 
@@ -21,7 +21,7 @@ else:
 try:
     sys.argv[2]
 except:
-    # create a backup file
+    # create a backup file if no output file was provided
     backupFile = os.getcwd() + "/" + inFile + ".orig"
     shutil.copyfile(inFile, backupFile)
     outFile = inFile
@@ -36,14 +36,13 @@ except:
 else:
     print("Error: too many arguments passed.")
     print("Usage: caption-clean input-file [output file]")
-    sys.exit(1)
+    exit(1)
 
-# Search and replace some chars that Merlin/COVE do not like.
+# The real work begins here... search and replace and write the files
+original = open(inFile, 'rb')
+tempFile = open(outFile + ".tmp", 'w')
 
-readOriginal = open(inFile, 'rb')
-middleFile = open(inFile + ".tmp",'w')
-
-for line in readOriginal:
+for line in original:
     line = line.replace('«', '[')
     line = line.replace('»', ']')
     line = line.replace('♩', '[music]')
@@ -52,10 +51,15 @@ for line in readOriginal:
     line = line.replace('♫', '[music]')
     line = line.replace(' pp', ' ')
     line = line.replace(' PP', ' ')
-    middleFile.write(line)
+    tempFile.write(line)
 
-middleFile.close()
-readOriginal.close()
+# clean up
+tempFile.close()
+original.close()
+tempFile = outFile + ".tmp"
+shutil.copyfile(tempFile, outFile)
+os.remove(tempFile)
+exit(0)
 
 ########################################################################
 # Eperimenting with conversion to UTF-8. Although after trying a few
@@ -72,7 +76,7 @@ readOriginal.close()
 #myFile.write(content.encode('utf-8'))
 #myFile.close()
 
-#with io.open(middleFile,'r',encoding='utf-8',errors='ignore') as dirtyFile, \
+#with io.open(tempFile,'r',encoding='utf-8',errors='ignore') as dirtyFile, \
 #     io.open(outFile,'w',encoding='ascii',errors='ignore') as cleanFile:
 #
 #     for line in dirtyFile:
