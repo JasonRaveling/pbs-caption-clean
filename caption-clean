@@ -52,7 +52,7 @@ for line in readOriginal:
     line = line.replace('♫', '[music]')
     line = line.replace(' pp', ' ')
     line = line.replace(' PP', ' ')
-    middleFile.write(line + "\n")
+    middleFile.write(line)
 
 middleFile.close()
 readOriginal.close()
