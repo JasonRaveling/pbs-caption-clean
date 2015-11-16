@@ -5,6 +5,7 @@ from __future__ import print_function
 import sys
 import io
 import os
+import re
 import shutil
 import fileinput
 
@@ -45,12 +46,8 @@ tempFile = open(outFile + ".tmp", 'w')
 for line in original:
     line = line.replace('«', '[')
     line = line.replace('»', ']')
-    line = line.replace('♩', '[music]')
-    line = line.replace('♪', '[music]')
-    line = line.replace('♫', '[music]')
-    line = line.replace('♫', '[music]')
-    line = line.replace(' pp', ' ')
-    line = line.replace(' PP', ' ')
+    line = re.sub(r".[♪♩♫]+", "[music]", line)
+    line = re.sub(r"[.?!,]?[pP]{2}", "", line)
     tempFile.write(line)
 
 # clean up
