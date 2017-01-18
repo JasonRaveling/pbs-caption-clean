@@ -15,5 +15,9 @@ If no output file is provided, it is copied to `myCaptionFile.xml.orig`
 
     ./caption-clean myCaptionFile.xml
 
+You can also give the modified file a new name.
+
+    ./caption-clean myCaptionFile.xml newFileName.xml
+
 ## Find a charachter that isn't being remove?
 If you're noticing a charachter that is probably the cause of a failed ingest, feel free to submit a pull request or open an issue on GitHub.
