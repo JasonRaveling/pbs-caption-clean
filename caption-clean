@@ -74,7 +74,7 @@ exit(0)
 #myFile.close()
 
 #with io.open(tempFile,'r',encoding='utf-8',errors='ignore') as dirtyFile, \
-#     io.open(outFile,'w',encoding='ascii',errors='ignore') as cleanFile:
+        #     io.open(outFile,'w',encoding='ascii',errors='ignore') as cleanFile:
 #
 #     for line in dirtyFile:
 #         print(*line.split(), file=cleanFile)
