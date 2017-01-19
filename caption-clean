@@ -44,10 +44,16 @@ original = open(inFile, 'rb')
 tempFile = open(outFile + ".tmp", 'w')
 
 for line in original:
-    line = line.replace('«', '[')
-    line = line.replace('»', ']')
-    line = re.sub(r"[♪♩♫]+", "[music]", line)
-    line = re.sub(r"[.?!,]?( )[pP]{2}", "", line)
+    # Using regex when possible. Some chars are not regex friendly
+    line = line.replace('‹', '[') # lsaquo
+    line = line.replace('›', ']') # rsaquo
+    line = line.replace('«', '[') # laquo
+    line = line.replace('»', ']') # raquo
+    line = line.replace('°', ' degrees')
+    line = line.replace('—', '-') # mdash
+    line = line.replace('•', '-') # bullet
+    line = re.sub(r"[♪♩♫]+", '[music]', line)
+    line = re.sub(r"[.?!,]?( )[pP]{2}", '', line)
     tempFile.write(line)
 
 # clean up

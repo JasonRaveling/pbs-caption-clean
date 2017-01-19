@@ -60,6 +60,14 @@
    <p begin="00:00:33.967" end="00:00:35.502" region="r5" style="default">
     That is no good.
    </p>
+   <p begin="00:00:33.967" end="00:00:35.502" region="r5" style="default">
+    How many degrees.... 10°.<br/>
+    There was/is a degree sign above.
+   </p>
+   <p begin="00:00:33.967" end="00:00:35.502" region="r5" style="default">
+    And here is an example of an — mdash.
+    And here is a bullet symbol •
+   </p>
    <p begin="00:00:40.173" end="00:00:42.542" region="r2" style="default">
     Oh. The show is ending. We<br/>
     better roll credits and play<br/>
@@ -92,7 +100,7 @@
    </p>
    <p begin="00:01:04.697" end="00:01:18.111" region="r6" style="default">
     Check out the repo at<br/>
-    github.com/lakelandPBS/pbs-caption-clean
+    https://github.com/webunraveling/pbs-caption-clean
    </p>
   </div>
  </body>
